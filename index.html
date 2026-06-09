@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centre Podològic Olga Cardona | Podología en Barcelona</title>
+    <meta name="description" content="Centre Podològic Olga Cardona, en Sants (Barcelona). Quiropodia, uñas encarnadas, estudio de la pisada, plantillas a medida, pie diabético y podología infantil. Pide tu cita.">
+    <meta property="og:title" content="Centre Podològic Olga Cardona · Barcelona">
+    <meta property="og:description" content="Cuidamos la salud de tus pies en Sants, Barcelona. Quiropodia, plantillas a medida, pie diabético y más. Camina sin dolor.">
+    <meta property="og:image" content="assets/hero.jpg">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* ============================================================
+           TEMA MODIFICABLE  —  CAMBIA SOLO ESTO PARA OTRO CLIENTE
+           (perfil: PODOLOGÍA -> blanco limpio + azul sereno)
+           ============================================================ */
+        :root {
+            --brand:      #2E86AB;   /* Azul sereno (acento principal) */
+            --brand-dark: #21688A;   /* Azul oscuro (hover) */
+            --accent:     #E0A26B;   /* Arena cálida (acento secundario) */
+            --bg:         #FFFFFF;   /* Blanco limpio (fondo) */
+            --surface:    #FFFFFF;   /* Superficie de tarjetas */
+            --surface-2:  #EEF5F9;   /* Azul muy claro (superficie alt.) */
+            --text:       #15252E;   /* Azul-pizarra muy oscuro (texto) */
+            --muted:      #5C6B73;   /* Gris suave (texto secundario) */
+            --font-head:  'Poppins', sans-serif;  /* titulares */
+            --font-body:  'Inter', sans-serif;    /* cuerpo */
+        }
+        /* ============================================================ */
+
+        body { background-color: var(--bg); color: var(--text); font-family: var(--font-body); font-weight: 400; }
+        h1,h2,h3,.font-head { font-family: var(--font-head); }
+        html { scroll-behavior: smooth; }
+        .kicker { letter-spacing: 0.22em; text-transform: uppercase; font-size: 0.72rem; font-weight: 600; }
+        .hairline { width: 56px; height: 3px; border-radius: 3px; background: var(--brand); }
+        .lift { transition: transform .35s ease, box-shadow .35s ease; }
+        .lift:hover { transform: translateY(-6px); box-shadow: 0 24px 40px -28px rgba(21,37,46,.45); }
+        .blob { background: radial-gradient(circle at 30% 30%, var(--surface-2), #DCEAF2); }
+        .bg-cover-fixed { background-size: cover; background-position: center; background-attachment: fixed; }
+        .overlay-band { background: linear-gradient(180deg, rgba(21,37,46,.62), rgba(21,37,46,.62)); }
+        @media (max-width: 768px) { .bg-cover-fixed { background-attachment: scroll; } }
+    </style>
+</head>
+
+<body class="flex flex-col min-h-screen antialiased">
+
+<!-- NAV -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300" style="background: rgba(255,255,255,0);">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="flex items-center justify-between h-20">
+            <a href="#inicio" class="font-head text-base sm:text-lg font-semibold leading-tight">Centre Podològic<br class="hidden sm:block"><span style="color: var(--brand);"> Olga Cardona</span></a>
+            <nav class="hidden md:flex items-center gap-9 text-sm" aria-label="Navegación principal">
+                <a href="#servicios" class="hover:text-[var(--brand)] transition-colors">Servicios</a>
+                <a href="#centro" class="hover:text-[var(--brand)] transition-colors">El centro</a>
+                <a href="#contacto" class="hover:text-[var(--brand)] transition-colors">Contacto</a>
+            </nav>
+            <a href="tel:+34934212496" class="hidden md:inline-block px-6 py-2.5 text-xs kicker text-white rounded-full transition-colors hover:bg-[var(--brand-dark)]" style="background: var(--brand);">Pedir cita</a>
+            <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Abrir menú">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" d="M4 7h16M4 12h16M4 17h16"/></svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden border-t" style="background: var(--bg); border-color: var(--surface-2);">
+        <div class="px-6 py-4 flex flex-col gap-3 text-sm">
+            <a href="#servicios" class="py-1.5">Servicios</a>
+            <a href="#centro" class="py-1.5">El centro</a>
+            <a href="#contacto" class="py-1.5">Contacto</a>
+            <a href="tel:+34934212496" class="mt-2 inline-block text-center px-6 py-2.5 text-xs kicker text-white rounded-full" style="background: var(--brand);">Pedir cita</a>
+        </div>
+    </div>
+</header>
+
+<!-- HERO -->
+<section id="inicio" class="relative pt-28 pb-20 sm:pt-36 sm:pb-28" style="background: var(--bg);">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div>
+            <p class="kicker" style="color: var(--brand);">Centro Podológico · Barcelona</p>
+            <h1 class="mt-5 font-head text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.05]">
+                Camina<br><span style="color: var(--brand);">sin dolor.</span>
+            </h1>
+            <p class="mt-6 text-lg leading-relaxed max-w-xl" style="color: var(--muted);">
+                Cuidamos la salud de tus pies con un trato cercano y profesional. Desde una quiropodia hasta plantillas a medida, en pleno barrio de Sants.
+            </p>
+            <div class="mt-9 flex flex-wrap gap-4">
+                <a href="tel:+34934212496" class="inline-flex items-center gap-2 px-7 py-3.5 text-xs kicker text-white rounded-full transition-colors hover:bg-[var(--brand-dark)]" style="background: var(--brand);">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+                    Pedir cita · 934 21 24 96
+                </a>
+                <a href="#servicios" class="px-7 py-3.5 text-xs kicker rounded-full border transition-colors hover:bg-[var(--surface-2)]" style="border-color: var(--brand); color: var(--brand);">Ver servicios</a>
+            </div>
+            <div class="mt-9 flex flex-wrap gap-x-8 gap-y-3 text-sm" style="color: var(--muted);">
+                <span class="flex items-center gap-2"><span style="color: var(--brand);">✓</span> Trato cercano y profesional</span>
+                <span class="flex items-center gap-2"><span style="color: var(--brand);">✓</span> En el barrio de Sants</span>
+            </div>
+        </div>
+
+        <div class="relative">
+            <div class="blob absolute -inset-4 sm:-inset-6 rounded-[2.5rem] -z-0"></div>
+            <div class="relative z-10 overflow-hidden rounded-[2rem] shadow-xl">
+                <img src="assets/hero.jpg" alt="Tratamiento podológico de pies" class="w-full h-80 sm:h-96 object-cover">
+            </div>
+            <div class="relative z-20 -mt-10 ml-4 sm:ml-6 inline-block bg-white rounded-2xl shadow-lg px-6 py-4 border" style="border-color: var(--surface-2);">
+                <p class="font-head text-lg font-semibold leading-tight">Olga Cardona</p>
+                <p class="text-sm" style="color: var(--muted);">Podóloga colegiada</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICIOS -->
+<section id="servicios" class="py-20 sm:py-28" style="background: var(--surface-2);">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8">
+        <div class="max-w-2xl">
+            <p class="kicker" style="color: var(--brand);">Servicios</p>
+            <h2 class="mt-4 font-head text-3xl sm:text-4xl font-bold tracking-tight">Todo para la salud de tus pies</h2>
+            <div class="hairline mt-5"></div>
+            <p class="mt-6 text-base leading-relaxed" style="color: var(--muted);">Tratamientos podológicos para todas las edades, con valoración personalizada en cada visita.</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-14">
+            <article class="lift bg-[var(--surface)] rounded-2xl p-7 border" style="border-color: #E1ECF2;">
+                <h3 class="font-head text-xl font-semibold" style="color: var(--brand);">Quiropodia</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Tratamiento de durezas, callos, helomas y uñas. El cuidado básico para mantener tus pies sanos.</p>
+            </article>
+            <article class="lift bg-[var(--surface)] rounded-2xl p-7 border" style="border-color: #E1ECF2;">
+                <h3 class="font-head text-xl font-semibold" style="color: var(--brand);">Uñas encarnadas</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Solución a la onicocriptosis con técnicas conservadoras o cirugía mínima para acabar con el dolor.</p>
+            </article>
+            <article class="lift bg-[var(--surface)] rounded-2xl p-7 border" style="border-color: #E1ECF2;">
+                <h3 class="font-head text-xl font-semibold" style="color: var(--brand);">Estudio de la pisada</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Análisis biomecánico para detectar el origen de molestias en pies, rodillas o espalda.</p>
+            </article>
+            <article class="lift bg-[var(--surface)] rounded-2xl p-7 border" style="border-color: #E1ECF2;">
+                <h3 class="font-head text-xl font-semibold" style="color: var(--brand);">Plantillas a medida</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Ortesis personalizadas que corrigen la pisada y reparten las presiones para que camines cómodo.</p>
+            </article>
+            <article class="lift bg-[var(--surface)] rounded-2xl p-7 border" style="border-color: #E1ECF2;">
+                <h3 class="font-head text-xl font-semibold" style="color: var(--brand);">Pie diabético</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Revisión y cuidado especializado para prevenir complicaciones y mantener tus pies protegidos.</p>
+            </article>
+            <article class="lift bg-[var(--surface)] rounded-2xl p-7 border" style="border-color: #E1ECF2;">
+                <h3 class="font-head text-xl font-semibold" style="color: var(--brand);">Podología infantil</h3>
+                <p class="mt-3 text-sm leading-relaxed" style="color: var(--muted);">Seguimiento del desarrollo del pie en los más pequeños para corregir a tiempo y crecer con buen pie.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- BANDA (cita) -->
+<section class="relative">
+    <div class="bg-cover-fixed min-h-[420px]" style="background-image:url('assets/bienestar.jpg');"></div>
+    <div class="absolute inset-0 overlay-band flex items-center">
+        <div class="max-w-3xl mx-auto px-5 sm:px-8 text-center">
+            <p class="kicker" style="color: #E0A26B;">Olga Cardona</p>
+            <p class="font-head text-3xl sm:text-4xl font-semibold mt-5 text-white leading-snug">Pies sanos desde el primer paso,<br>para toda la vida.</p>
+        </div>
+    </div>
+</section>
+
+<!-- EL CENTRO -->
+<section id="centro" class="py-20 sm:py-28">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div class="order-2 lg:order-1">
+            <p class="kicker" style="color: var(--brand);">El centro</p>
+            <h2 class="mt-4 font-head text-3xl sm:text-4xl font-bold tracking-tight leading-tight">Tus pies, en buenas manos</h2>
+            <div class="hairline mt-5"></div>
+            <p class="mt-6 text-base leading-relaxed" style="color: var(--muted);">
+                En el <span style="color: var(--text);">Centre Podològic Olga Cardona</span> cuidamos la salud de tus pies con rigor profesional y un trato cercano. Te explicamos siempre qué te pasa y cómo lo vamos a tratar.
+            </p>
+            <p class="mt-4 text-base leading-relaxed" style="color: var(--muted);">
+                Estamos en <span style="color: var(--text);">Rambla de Badal</span>, en el barrio de Sants, con todo lo necesario para que tus pies vuelvan a estar como nuevos.
+            </p>
+            <div class="mt-8 grid grid-cols-3 gap-6">
+                <div>
+                    <p class="font-head text-3xl font-bold" style="color: var(--brand);">Colegiada</p>
+                    <p class="text-xs kicker mt-2" style="color: var(--muted);">Profesional</p>
+                </div>
+                <div>
+                    <p class="font-head text-3xl font-bold" style="color: var(--brand);">Todas</p>
+                    <p class="text-xs kicker mt-2" style="color: var(--muted);">Las edades</p>
+                </div>
+                <div>
+                    <p class="font-head text-3xl font-bold" style="color: var(--brand);">Sants</p>
+                    <p class="text-xs kicker mt-2" style="color: var(--muted);">Barcelona</p>
+                </div>
+            </div>
+        </div>
+        <div class="order-1 lg:order-2">
+            <div class="overflow-hidden rounded-[2rem] shadow-lg">
+                <img src="assets/tratamiento.jpg" alt="Tratamiento podológico en el centro Olga Cardona" class="w-full h-96 object-cover">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-20 sm:py-28" style="background: var(--surface-2);">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div>
+            <p class="kicker" style="color: var(--brand);">Contacto y cita</p>
+            <h2 class="mt-4 font-head text-3xl sm:text-4xl font-bold tracking-tight leading-tight">Pide tu cita</h2>
+            <div class="hairline mt-5"></div>
+            <p class="mt-6 text-base leading-relaxed" style="color: var(--muted);">Llámanos y te damos hora. Atendemos con cita previa en el barrio de Sants.</p>
+
+            <div class="mt-9 space-y-6">
+                <div class="flex items-start gap-4">
+                    <span class="mt-1 text-lg" style="color: var(--brand);">&#9742;</span>
+                    <div>
+                        <p class="text-xs kicker" style="color: var(--muted);">Teléfono</p>
+                        <a href="tel:+34934212496" class="text-lg font-medium hover:underline">934 21 24 96</a>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="mt-1 text-lg" style="color: var(--brand);">&#9737;</span>
+                    <div>
+                        <p class="text-xs kicker" style="color: var(--muted);">Dirección</p>
+                        <p class="text-lg font-medium">Rambla de Badal, 45</p>
+                        <p class="text-sm" style="color: var(--muted);">Entresuelo 3ª, escalera derecha · Sants-Montjuïc, 08014 Barcelona</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4">
+                    <span class="mt-1 text-lg" style="color: var(--brand);">&#9788;</span>
+                    <div>
+                        <p class="text-xs kicker" style="color: var(--muted);">Horario</p>
+                        <p class="text-lg font-medium">Con cita previa</p>
+                        <p class="text-sm" style="color: var(--muted);">Llámanos y te damos hora.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10">
+                <a href="tel:+34934212496" class="inline-flex items-center gap-2 px-8 py-3.5 text-xs kicker text-white rounded-full transition-colors hover:bg-[var(--brand-dark)]" style="background: var(--brand);">
+                    <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+                    Llamar ahora
+                </a>
+            </div>
+        </div>
+        <div class="overflow-hidden rounded-2xl shadow-lg min-h-[380px]">
+            <iframe
+                title="Ubicación del Centre Podològic Olga Cardona"
+                src="https://www.google.com/maps?q=Rambla+de+Badal+45,+08014+Barcelona&output=embed"
+                class="w-full h-full min-h-[380px] border-0" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="mt-auto py-10 border-t" style="border-color: var(--surface-2);">
+    <div class="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-5">
+        <div>
+            <p class="font-head text-lg font-semibold">Centre Podològic <span style="color: var(--brand);">Olga Cardona</span></p>
+            <p class="text-sm mt-1" style="color: var(--muted);">Rambla de Badal, 45, entresuelo 3ª · 08014 Barcelona</p>
+        </div>
+        <div class="flex items-center gap-7 text-sm" style="color: var(--muted);">
+            <a href="#servicios" class="hover:text-[var(--text)]">Servicios</a>
+            <a href="#centro" class="hover:text-[var(--text)]">El centro</a>
+            <a href="#contacto" class="hover:text-[var(--text)]">Contacto</a>
+        </div>
+        <p class="text-xs" style="color: var(--muted);">© <span id="year"></span> Centre Podològic Olga Cardona</p>
+    </div>
+</footer>
+
+<!-- BOTÓN FLOTANTE LLAMAR -->
+<a href="tel:+34934212496" aria-label="Llamar al centro"
+   class="fixed bottom-6 right-6 z-50 h-14 w-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110" style="background: var(--brand);">
+    <svg class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.53 15.53 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+</a>
+
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+
+    const nav = document.getElementById('nav');
+    function onScroll() {
+        if (window.scrollY > 30) {
+            nav.style.background = 'rgba(255,255,255,.92)';
+            nav.style.backdropFilter = 'blur(8px)';
+            nav.style.boxShadow = '0 8px 24px -18px rgba(21,37,46,.5)';
+        } else {
+            nav.style.background = 'rgba(255,255,255,0)';
+            nav.style.backdropFilter = 'none';
+            nav.style.boxShadow = 'none';
+        }
+    }
+    window.addEventListener('scroll', onScroll);
+    onScroll();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
